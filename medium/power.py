@@ -4,6 +4,11 @@ class Solution:
             x = 1 / x
             n = -n
         pow = 1
-        for i in range(n):
-            pow *= x
+        
+        while n:
+            if n % 2 == 1:
+                pow *= x
+            x *= x
+            n //= 2
+
         return pow
